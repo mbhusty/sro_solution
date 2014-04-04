@@ -102,6 +102,7 @@
             this.butHandClear = new System.Windows.Forms.Button();
             this.butHandAdd = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.linkLabel25 = new System.Windows.Forms.LinkLabel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -111,23 +112,26 @@
             this.cbSubProducts = new System.Windows.Forms.ComboBox();
             this.cbClientType = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.linkLabel32 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel31 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel15 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
             this.linkLabel30 = new System.Windows.Forms.LinkLabel();
             this.linkLabel29 = new System.Windows.Forms.LinkLabel();
             this.linkLabel28 = new System.Windows.Forms.LinkLabel();
             this.linkLabel27 = new System.Windows.Forms.LinkLabel();
             this.linkLabel26 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel25 = new System.Windows.Forms.LinkLabel();
             this.linkLabel24 = new System.Windows.Forms.LinkLabel();
             this.linkLabel23 = new System.Windows.Forms.LinkLabel();
             this.linkLabel22 = new System.Windows.Forms.LinkLabel();
             this.linkLabel21 = new System.Windows.Forms.LinkLabel();
             this.linkLabel20 = new System.Windows.Forms.LinkLabel();
             this.linkLabel19 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel13 = new System.Windows.Forms.LinkLabel();
             this.linkLabel18 = new System.Windows.Forms.LinkLabel();
             this.linkLabel17 = new System.Windows.Forms.LinkLabel();
             this.linkLabel16 = new System.Windows.Forms.LinkLabel();
             this.linkLabel14 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel13 = new System.Windows.Forms.LinkLabel();
             this.linkLabel12 = new System.Windows.Forms.LinkLabel();
             this.linkLabel11 = new System.Windows.Forms.LinkLabel();
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
@@ -157,10 +161,7 @@
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel15 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel31 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel32 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel33 = new System.Windows.Forms.LinkLabel();
             this.tcClients.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchClient)).BeginInit();
@@ -857,6 +858,18 @@
             this.label11.TabIndex = 10;
             this.label11.Text = "Комментарий / Действия сотрудника";
             // 
+            // linkLabel25
+            // 
+            this.linkLabel25.AutoSize = true;
+            this.linkLabel25.Location = new System.Drawing.Point(745, 33);
+            this.linkLabel25.Name = "linkLabel25";
+            this.linkLabel25.Size = new System.Drawing.Size(117, 13);
+            this.linkLabel25.TabIndex = 24;
+            this.linkLabel25.TabStop = true;
+            this.linkLabel25.Text = "Новые офисы адреса";
+            this.linkLabel25.Visible = false;
+            this.linkLabel25.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel25_LinkClicked);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -955,6 +968,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.LightYellow;
+            this.groupBox1.Controls.Add(this.linkLabel33);
             this.groupBox1.Controls.Add(this.linkLabel32);
             this.groupBox1.Controls.Add(this.linkLabel31);
             this.groupBox1.Controls.Add(this.linkLabel15);
@@ -995,6 +1009,52 @@
             this.groupBox1.Text = "Подсказки";
             this.toolTip1.SetToolTip(this.groupBox1, "Подсказки по скриптам. Для открытия кликните по ссылке");
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // linkLabel32
+            // 
+            this.linkLabel32.AutoSize = true;
+            this.linkLabel32.Location = new System.Drawing.Point(9, 126);
+            this.linkLabel32.Name = "linkLabel32";
+            this.linkLabel32.Size = new System.Drawing.Size(215, 13);
+            this.linkLabel32.TabIndex = 33;
+            this.linkLabel32.TabStop = true;
+            this.linkLabel32.Text = "Негативная инфо о Банке от РА Эксперт";
+            this.linkLabel32.Visible = false;
+            this.linkLabel32.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel32_LinkClicked);
+            // 
+            // linkLabel31
+            // 
+            this.linkLabel31.AutoSize = true;
+            this.linkLabel31.Location = new System.Drawing.Point(9, 109);
+            this.linkLabel31.Name = "linkLabel31";
+            this.linkLabel31.Size = new System.Drawing.Size(170, 13);
+            this.linkLabel31.TabIndex = 32;
+            this.linkLabel31.TabStop = true;
+            this.linkLabel31.Text = "Совет Директоров и Правление";
+            this.linkLabel31.Visible = false;
+            this.linkLabel31.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel31_LinkClicked);
+            // 
+            // linkLabel15
+            // 
+            this.linkLabel15.AutoSize = true;
+            this.linkLabel15.Location = new System.Drawing.Point(6, 53);
+            this.linkLabel15.Name = "linkLabel15";
+            this.linkLabel15.Size = new System.Drawing.Size(166, 13);
+            this.linkLabel15.TabIndex = 31;
+            this.linkLabel15.TabStop = true;
+            this.linkLabel15.Text = "Акция по вкладам с 01.04.2014";
+            this.linkLabel15.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel15_LinkClicked);
+            // 
+            // linkLabel7
+            // 
+            this.linkLabel7.AutoSize = true;
+            this.linkLabel7.Location = new System.Drawing.Point(7, 34);
+            this.linkLabel7.Name = "linkLabel7";
+            this.linkLabel7.Size = new System.Drawing.Size(128, 13);
+            this.linkLabel7.TabIndex = 30;
+            this.linkLabel7.TabStop = true;
+            this.linkLabel7.Text = "Акция для пенсионеров";
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
             // 
             // linkLabel30
             // 
@@ -1055,18 +1115,6 @@
             this.linkLabel26.Text = "Акция МСБ Компании продаж";
             this.linkLabel26.Visible = false;
             this.linkLabel26.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel26_LinkClicked);
-            // 
-            // linkLabel25
-            // 
-            this.linkLabel25.AutoSize = true;
-            this.linkLabel25.Location = new System.Drawing.Point(745, 33);
-            this.linkLabel25.Name = "linkLabel25";
-            this.linkLabel25.Size = new System.Drawing.Size(117, 13);
-            this.linkLabel25.TabIndex = 24;
-            this.linkLabel25.TabStop = true;
-            this.linkLabel25.Text = "Новые офисы адреса";
-            this.linkLabel25.Visible = false;
-            this.linkLabel25.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel25_LinkClicked);
             // 
             // linkLabel24
             // 
@@ -1140,6 +1188,18 @@
             this.linkLabel19.Visible = false;
             this.linkLabel19.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel19_LinkClicked);
             // 
+            // linkLabel13
+            // 
+            this.linkLabel13.AutoSize = true;
+            this.linkLabel13.Location = new System.Drawing.Point(11, 34);
+            this.linkLabel13.Name = "linkLabel13";
+            this.linkLabel13.Size = new System.Drawing.Size(125, 13);
+            this.linkLabel13.TabIndex = 12;
+            this.linkLabel13.TabStop = true;
+            this.linkLabel13.Text = "Памятка виза инфинит";
+            this.linkLabel13.Visible = false;
+            this.linkLabel13.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel13_LinkClicked);
+            // 
             // linkLabel18
             // 
             this.linkLabel18.AutoSize = true;
@@ -1187,18 +1247,6 @@
             this.linkLabel14.Text = "Материнский капитал";
             this.linkLabel14.Visible = false;
             this.linkLabel14.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel14_LinkClicked);
-            // 
-            // linkLabel13
-            // 
-            this.linkLabel13.AutoSize = true;
-            this.linkLabel13.Location = new System.Drawing.Point(11, 34);
-            this.linkLabel13.Name = "linkLabel13";
-            this.linkLabel13.Size = new System.Drawing.Size(125, 13);
-            this.linkLabel13.TabIndex = 12;
-            this.linkLabel13.TabStop = true;
-            this.linkLabel13.Text = "Памятка виза инфинит";
-            this.linkLabel13.Visible = false;
-            this.linkLabel13.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel13_LinkClicked);
             // 
             // linkLabel12
             // 
@@ -1531,51 +1579,17 @@
             this.label13.Text = "Обращения клиентов";
             this.label13.Visible = false;
             // 
-            // linkLabel7
+            // linkLabel33
             // 
-            this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Location = new System.Drawing.Point(7, 34);
-            this.linkLabel7.Name = "linkLabel7";
-            this.linkLabel7.Size = new System.Drawing.Size(128, 13);
-            this.linkLabel7.TabIndex = 30;
-            this.linkLabel7.TabStop = true;
-            this.linkLabel7.Text = "Акция для пенсионеров";
-            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
-            // 
-            // linkLabel15
-            // 
-            this.linkLabel15.AutoSize = true;
-            this.linkLabel15.Location = new System.Drawing.Point(6, 53);
-            this.linkLabel15.Name = "linkLabel15";
-            this.linkLabel15.Size = new System.Drawing.Size(166, 13);
-            this.linkLabel15.TabIndex = 31;
-            this.linkLabel15.TabStop = true;
-            this.linkLabel15.Text = "Акция по вкладам с 01.04.2014";
-            this.linkLabel15.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel15_LinkClicked);
-            // 
-            // linkLabel31
-            // 
-            this.linkLabel31.AutoSize = true;
-            this.linkLabel31.Location = new System.Drawing.Point(9, 109);
-            this.linkLabel31.Name = "linkLabel31";
-            this.linkLabel31.Size = new System.Drawing.Size(170, 13);
-            this.linkLabel31.TabIndex = 32;
-            this.linkLabel31.TabStop = true;
-            this.linkLabel31.Text = "Совет Директоров и Правление";
-            this.linkLabel31.Visible = false;
-            this.linkLabel31.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel31_LinkClicked);
-            // 
-            // linkLabel32
-            // 
-            this.linkLabel32.AutoSize = true;
-            this.linkLabel32.Location = new System.Drawing.Point(9, 126);
-            this.linkLabel32.Name = "linkLabel32";
-            this.linkLabel32.Size = new System.Drawing.Size(215, 13);
-            this.linkLabel32.TabIndex = 33;
-            this.linkLabel32.TabStop = true;
-            this.linkLabel32.Text = "Негативная инфо о Банке от РА Эксперт";
-            this.linkLabel32.Visible = false;
-            this.linkLabel32.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel32_LinkClicked);
+            this.linkLabel33.AutoSize = true;
+            this.linkLabel33.Location = new System.Drawing.Point(7, 16);
+            this.linkLabel33.Name = "linkLabel33";
+            this.linkLabel33.Size = new System.Drawing.Size(105, 13);
+            this.linkLabel33.TabIndex = 34;
+            this.linkLabel33.TabStop = true;
+            this.linkLabel33.Text = "ТП Корпоративный";
+            this.linkLabel33.Visible = false;
+            this.linkLabel33.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel33_LinkClicked);
             // 
             // SRO
             // 
@@ -1738,5 +1752,6 @@
         private System.Windows.Forms.LinkLabel linkLabel7;
         private System.Windows.Forms.LinkLabel linkLabel31;
         private System.Windows.Forms.LinkLabel linkLabel32;
+        private System.Windows.Forms.LinkLabel linkLabel33;
     }
 }

@@ -185,6 +185,7 @@ namespace SRO
                     LabelGroup10Visible(false);
                     LabelGroup11Visible(false);
                     LabelGroup12Visible(false);
+                    LabelGroup13Visible(false);
                     
                     break;
                 case "Вклады":
@@ -200,6 +201,7 @@ namespace SRO
                     LabelGroup10Visible(false);
                     LabelGroup11Visible(false);
                     LabelGroup12Visible(false);
+                    LabelGroup13Visible(false);
                     
                     break;
                 case "Адреса и номера телефонов":
@@ -215,6 +217,7 @@ namespace SRO
                     LabelGroup10Visible(false);
                     LabelGroup11Visible(false);
                     LabelGroup12Visible(false);
+                    LabelGroup13Visible(false);
                     
                     break;
                 case "Перевод":
@@ -230,6 +233,7 @@ namespace SRO
                     LabelGroup10Visible(false);
                     LabelGroup11Visible(false);
                     LabelGroup12Visible(false);
+                    LabelGroup13Visible(false);
                     
                     break;
                 case "Известная проблема":
@@ -245,6 +249,7 @@ namespace SRO
                     LabelGroup10Visible(false);
                     LabelGroup11Visible(false);
                     LabelGroup12Visible(false);
+                    LabelGroup13Visible(false);
                     
                     break;
                 case "МСБ":
@@ -260,6 +265,7 @@ namespace SRO
                     LabelGroup10Visible(false);
                     LabelGroup11Visible(false);
                     LabelGroup12Visible(false);
+                    LabelGroup13Visible(false);
                     
                     break;
                 case "Пластиковые карты":
@@ -275,6 +281,7 @@ namespace SRO
                     LabelGroup10Visible(false);
                     LabelGroup11Visible(false);
                     LabelGroup12Visible(false);
+                    LabelGroup13Visible(false);
                     
                     break;
                 case "Чемпионат снегоход":
@@ -290,6 +297,7 @@ namespace SRO
                     LabelGroup10Visible(false);
                     LabelGroup11Visible(false);
                     LabelGroup12Visible(false);
+                    LabelGroup13Visible(false);
                     
                     break;
                 case "Информация о банке и руководстве":
@@ -305,7 +313,7 @@ namespace SRO
                     LabelGroup10Visible(false);
                     LabelGroup11Visible(false);
                     LabelGroup12Visible(false);
-                    
+                    LabelGroup13Visible(false);
                     break;
                 case "Курсы валют":
                     LabelGroup1Visible(false);
@@ -320,7 +328,7 @@ namespace SRO
                     LabelGroup10Visible(true);
                     LabelGroup11Visible(false);
                     LabelGroup12Visible(false);
-                    
+                    LabelGroup13Visible(false);
                     break;
                 case "Срочные денежные переводы":
                     LabelGroup1Visible(false);
@@ -335,7 +343,7 @@ namespace SRO
                     LabelGroup10Visible(false);
                     LabelGroup11Visible(true);
                     LabelGroup12Visible(false);
-                    
+                    LabelGroup13Visible(false);
                     break;
                 case "РКО":
                     LabelGroup1Visible(false);
@@ -350,8 +358,24 @@ namespace SRO
                     LabelGroup10Visible(false);
                     LabelGroup11Visible(false);
                     LabelGroup12Visible(true);
+                    LabelGroup13Visible(false);
+                                        break;
                     
-                    break;
+                case "Потребительские кредиты":
+                      LabelGroup1Visible(false);
+                                        LabelGroup2Visible(false);
+                                        LabelGroup3Visible(false);
+                                        LabelGroup4Visible(false);
+                                        LabelGroup5Visible(false);
+                                        LabelGroup6Visible(false);
+                                        LabelGroup7Visible(false);
+                                        LabelGroup8Visible(false);
+                                        LabelGroup9Visible(false);
+                                        LabelGroup10Visible(false);
+                                        LabelGroup11Visible(false);
+                                        LabelGroup12Visible(false);
+                                        LabelGroup13Visible(true);
+                                        break;
                 default:
                     LabelGroup1Visible(false);
                     LabelGroup2Visible(false);
@@ -365,6 +389,7 @@ namespace SRO
                     LabelGroup10Visible(false);
                     LabelGroup11Visible(false);
                     LabelGroup12Visible(false);
+                    LabelGroup13Visible(false);
                     break;
             #endregion
 
@@ -442,6 +467,11 @@ namespace SRO
         {
             linkLabel7.Visible = visible;
             linkLabel15.Visible = visible;
+        }
+
+        void LabelGroup13Visible(bool visible)//потреб.кр.
+        {
+            linkLabel33.Visible = visible;
         }
 
         private void chbIsBank_CheckedChanged(object sender, EventArgs e)
@@ -1548,6 +1578,18 @@ namespace SRO
             try
             {
                 System.Diagnostics.Process.Start(@"\\CC-SERV\Users\Administrator\Documents\01-Fileserver\Scripts\Информация о банке и руковдстве\Совет Директоров и Правление.docx");
+            }
+            catch (Win32Exception)
+            {
+                MessageBox.Show("Ничего не выбрано или\nнеобходимый файл отсутствует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void linkLabel33_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(@"\\CC-SERV\Users\Administrator\Documents\01-Fileserver\Scripts\Потреб. кредиты\ТП Корпоративный.docx");
             }
             catch (Win32Exception)
             {
